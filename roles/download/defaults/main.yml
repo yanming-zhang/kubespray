@@ -57,10 +57,10 @@ contiv_version: 1.2.1
 cilium_version: "v1.2.0"
 
 # Download URLs
-kubeadm_download_url: https://github.com/yanming-zhang/kubernetes/raw/master/release/{{ kubeadm_version }}/bin/linux/{{ image_arch }}/kubeadm.tgz
+kubeadm_download_url: "https://github.com/yanming-zhang/kubernetes/raw/master/release/{{ kubeadm_version }}/bin/linux/{{ image_arch }}/kubeadm.tgz"
 vault_download_url: "https://releases.hashicorp.com/vault/{{ vault_version }}/vault_{{ vault_version }}_linux_{{ image_arch }}.zip"
 etcd_download_url: "https://github.com/coreos/etcd/releases/download/{{ etcd_version }}/etcd-{{ etcd_version }}-linux-amd64.tar.gz"
-hyperkube_download_url: https://github.com/yanming-zhang/kubernetes/raw/master/release/{{ kube_version }}/bin/linux/amd64/hyperkube.tgz
+hyperkube_download_url: "https://github.com/yanming-zhang/kubernetes/raw/master/release/{{ kube_version }}/bin/linux/amd64/hyperkube.tgz"
 
 # Checksums
 hyperkube_checksums:
@@ -158,7 +158,7 @@ kubedns_image_repo: "registry.cn-shanghai.aliyuncs.com/zym-k8s/k8s-dns-kube-dns-
 kubedns_image_tag: "{{ kubedns_version }}"
 
 coredns_version: "{%- if image_arch != 'amd64' -%}1.1.3{%- else -%}1.2.2{%- endif -%}"
-coredns_image_repo: "registry.cn-shanghai.aliyuncs.com/zym-svc"
+coredns_image_repo: "registry.cn-shanghai.aliyuncs.com/zym-svc/coredns"
 coredns_image_tag: "{{ coredns_version }}{%- if image_arch != 'amd64' -%}__{{ image_arch}}_linux{%- endif -%}"
 
 
